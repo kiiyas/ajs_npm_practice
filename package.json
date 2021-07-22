@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build & http-server ./dist",
-    "build": "stylus src/index.stylus --out dist & copy src/**.html dist/"
+    "build": "stylus ./src/index.stylus --out ./dist && cp src/**.html dist/"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "browser-sync": "^2.27.4",
     "http-server": "0.12.3",
     "stylus": "^0.54.8"
   }
