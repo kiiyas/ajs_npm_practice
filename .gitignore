@@ -1,0 +1,5 @@
+node_modules
+#
+#в папке dist все файлы будут сами генерироваться командой build,включенной в start
+dist/*
+!dist/.gitkeep
