@@ -5,14 +5,22 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build & http-server ./dist",
-    "build": "stylus ./src/index.stylus --out ./dist && cp src/**.html dist/"
+    "build": "stylus ./src/index.stylus --out ./dist && cp src/**.html dist/ && run babel",
+    "lint": "eslint ./src",
+    "babel": "babel ./src -d ./dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
     "browser-sync": "^2.27.4",
+    "eslint": "^7.31.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
     "http-server": "0.12.3",
     "stylus": "^0.54.8"
   }
